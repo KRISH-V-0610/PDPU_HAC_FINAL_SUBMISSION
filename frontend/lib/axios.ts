@@ -12,9 +12,9 @@ const safeStringify = (obj: any) => {
 // ✅ Set Up Axios Instance
 const api = axios.create({
   baseURL:
-    process.env.NODE_ENV === "production"
-      ? "https://pdpu-hac-final-submission-4.onrender.com"
-      : "http://localhost:5000",
+  
+     "https://pdpu-hac-final-submission-4.onrender.com"
+    ,
   headers: {
     "Content-Type": "application/json",
   },
