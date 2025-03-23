@@ -8,7 +8,6 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware
-const cors = require("cors");
 app.use(cors({ origin: "*", credentials: true }));
 
 // Increase payload size limit for file uploads
