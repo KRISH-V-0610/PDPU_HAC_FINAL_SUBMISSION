@@ -1,0 +1,12 @@
+services:
+  type: web
+  name : fingenius
+  runtime: python
+  plan: free
+  autoDeploy: false
+buildCon-<land.• pip install
+-r requirements .txt
+: uvicorn main.
+- -host O.O.O.O
+app
+• $PORT
