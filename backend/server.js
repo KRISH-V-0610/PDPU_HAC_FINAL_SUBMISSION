@@ -8,7 +8,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware
-app.use(cors({ origin: "*", credentials: true }));
+app.use(cors({ origin: "https://comply-smart-system.vercel.app/", credentials: true }));
 
 // Increase payload size limit for file uploads
 app.use(express.json({ limit: '50mb' }));
