@@ -11,12 +11,16 @@ const safeStringify = (obj: any) => {
 
 // ✅ Set Up Axios Instance
 const api = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000",
+  baseURL:
+    process.env.NODE_ENV === "production"
+      ? "https://pdpu-hac-final-submission-4.onrender.com"
+      : "http://localhost:5000",
   headers: {
     "Content-Type": "application/json",
   },
   withCredentials: true,
 });
+
 
 // ✅ Request Interceptor
 api.interceptors.request.use(
@@ -120,7 +124,7 @@ api.interceptors.response.use(
 
       // Build a comprehensive error object
       return Promise.reject({
-        message: error.response?.data?.message || error.message || "An error occurred",
+        // message: error.response?.data?.message || error.message || "An error occurred",
         status: error.response?.status || "Unknown",
         data: error.response?.data || null,
         details: errorDetails,
