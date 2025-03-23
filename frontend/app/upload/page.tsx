@@ -45,7 +45,7 @@ export default function UploadPage() {
   const uploadFileAndFetchAuditData = async (formData: FormData) => {
     try {
       // First fetch: Upload the file
-      const response = await fetch('http://localhost:5000/api/files/upload', {
+      const response = await fetch('https://pdpu-hac-final-submission-4.onrender.com/api/files/upload', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
